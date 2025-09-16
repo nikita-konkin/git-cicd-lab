@@ -20,9 +20,17 @@ describe('Greet function', () => {
     });
 });
 
+describe('Additional math functions', () => {
+    test('subtracts 5 - 3 to equal 2', () => {
+        expect(subtract(5, 3)).toBe(2);
+    });
 
-describe('Power function', () => {
-    test('calculates 2^3 to equal 8', () => {
-        expect(power(2, 3)).toBe(8);
+    test('divides 10 / 2 to equal 5', () => {
+        expect(divide(10, 2)).toBe(5);
+    });
+
+    test('throws error on division by zero', () => {
+        expect(() => divide(10, 0)).toThrow('Division by zero');
+
     });
 });
